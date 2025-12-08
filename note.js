@@ -31,12 +31,18 @@ user6["likes birds"] = true;
 alert(user6["likes birds"]); // true
 delete user6["likes birds"];
 // 方括号中的字符串要放在引号中，单引号或双引号都可以。
+let key0 = "likes birds";
+user[key0] = true;
+// 跟 user["likes birds"] = true; 一样
+// []也可以这样用
 let user7 = {
-  name: "John",
+  name: "John", //字符串一定要加引号，不然访问不到
   age: 30,
 };
 
 let key = prompt("What do you want to know about the user7?", "name");
-
-// 访问变量
-alert(user7[key]); // John（如果输入 "name"）
+//这里加“”的name，其实是在访问属性名来得到值。加引号只是因为是字符串，数字那些不用
+alert(user7[key]); // John（如果输入 "name"）这里其实是在对象user7里面访问key那里输入的
+// []可以这样用，. 不行，会出现下面的。
+let key2 = "name";
+alert(user.key2); // undefined
