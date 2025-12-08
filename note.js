@@ -46,3 +46,4 @@ alert(user7[key]); // John（如果输入 "name"）这里其实是在对象user7
 // []可以这样用，. 不行，会出现下面的。
 let key2 = "name";
 alert(user.key2); // undefined
+// 计算属性
