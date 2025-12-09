@@ -38,13 +38,25 @@
 // let sum = [salaries.John + salaries.Ann + salaries.Pete];
 // alert(sum);
 // 上面这个不行，因为对象为空的时候，返回的是NaN.
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-};
-let sum = 0;
-for (let key in salaries) {
-  sum += salaries[key];
-}
-alert(sum);
+
+// let salaries = {
+//   xh: 90,
+//   xm: 88,
+// };
+// let sum = 0;
+// for (let mz in salaries) {
+//   sum += salaries[mz];
+// }
+// // alert(sum);
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   deep: 100,
+//   name1: "okok",
+// };
+// for (let key in menu) {
+//   if (typeof menu[key] == "number") {
+//     menu[key] *= 2;
+//   }
+// }
+// alert(menu.width + ", " + menu.height + ", " + menu.deep + ", " + menu.name1);

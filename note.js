@@ -170,3 +170,32 @@ alert(String(Math.trunc(Number("1.2")))); // "1"，不同于 "1.2" ⇒ 不是整
 // 访问属性
 // 点符号: obj.property。
 // 方括号 obj["property"]，这个是属性名，方括号允许从变量中获取键，例如 obj[varWithKey] 这个是变量名
+//
+//作业，计算工资总和。
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+let sum = 0;
+// 下面这一步是检验key是否在salario里面，true的话，开始运行循环，sum加key对应的值，循环到false为止，这个时候，sum已经加上所有值了
+for (let key in salaries) {
+  sum += salaries[key];
+} //这里最好用[]来访问对象里面的属性，
+alert(sum);
+//记住typeof返回的是字符串，所以
+if (typeof menu[key] == "number");
+// 这样才是在检验值的类型
+//还有，alert一般只接受一个参数，如果想要把对象里面的值都打印出来，那就这样。
+let menu = {
+  width: 200,
+  height: 300,
+  deep: 100,
+  name1: "okok",
+};
+for (let key in menu) {
+  if (typeof menu[key] == "number") {
+    menu[key] *= 2;
+  }
+}
+alert(menu.width + ", " + menu.height + ", " + menu.deep + ", " + menu.name1);
