@@ -88,3 +88,32 @@
 // // user 和 clone 分享同一个 sizes
 // user4.sizes.width++; // 通过其中一个改变属性值
 // alert(clone.sizes.width);
+////////////
+// let calculator = {
+//   read() {
+//     this.a = +prompt("input a", 9);
+//     this.b = +prompt("input b", 8);
+//   },
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   mul() {
+//     return this.a * this.b;
+//   },
+// };
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function () {
+    // 显示当前的 step
+    alert(this.step);
+  },
+};
