@@ -73,18 +73,18 @@
 // let permissions2 = { canEdit: true };
 // Object.assign(user3, permissions1, permissions2);
 // alert(user3.canEdit);
-let user4 = {
-  name: "John",
-  sizes: {
-    height: 182,
-    width: 50,
-  },
-};
-alert(user4.sizes.height); // 182
-let clone = Object.assign({}, user4);
+// let user4 = {
+//   name: "John",
+//   sizes: {
+//     height: 182,
+//     width: 50,
+//   },
+// };
+// alert(user4.sizes.height); // 182
+// let clone = Object.assign({}, user4);
 
-alert(user4.sizes === clone.sizes); // true，同一个对象
+// alert(user4.sizes === clone.sizes); // true，同一个对象
 
-// user 和 clone 分享同一个 sizes
-user4.sizes.width++; // 通过其中一个改变属性值
-alert(clone.sizes.width);
+// // user 和 clone 分享同一个 sizes
+// user4.sizes.width++; // 通过其中一个改变属性值
+// alert(clone.sizes.width);
