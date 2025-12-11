@@ -167,3 +167,15 @@
 // let cc2 = 3;
 // alert(aa2 < bb2);
 // alert(aa2 < cc2);
+// if (2 == 8) alert("OK");
+// else alert("no");
+// let a9 = +prompt("input", 90);
+// let b9 = a9 < 20 ? "xiao" : a9 < 50 ? "zhong" : a9 < 90 ? "da" : "taida";
+// alert(b9);
+// let hour = +prompt("time", 9);
+// if (hour < 8 || hour > 18 || hour == 16) {
+//   alert("gun");
+// } else {
+//   alert("sban");
+// }
+kaishi: for (let i = 0; i < 10; i++) {}
