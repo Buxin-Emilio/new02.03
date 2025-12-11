@@ -209,3 +209,115 @@ for (let i = 0; i < 3; i++) {
 //标签 是在循环之前带有冒号的标识符：labelName: for (...)
 //  {...}
 // break <labelName> 语句跳出循环至标签处
+kaishi: for (let i = 0; i < 10; i++) {
+  for (let j = 0; j < 10; j++) {
+    let input = prompt(`Value at coords (${i},${j})`, "");
+    if (!input) break kaishi;
+  }
+}
+
+//break 跳到最外面的标签那里开始循环。break 指令必须在代码块内
+//三种循环：
+
+// while —— 每次迭代之前都要检查条件。
+// do..while —— 每次迭代后都要检查条件。
+// for (;;) —— 每次迭代之前都要检查条件，可以使用其他设置。
+//switch语句，替代多个if的。
+//任何表达式都可以成为 switch/case 的参数
+let a11 = 2 + 2;
+switch (a11) {
+  case 3: //相当于if（a11 ===3）
+    alert("Too small");
+    break;
+  case 4:
+    alert("Exactly!");
+    break;
+  case 5:
+    alert("Too big");
+    break;
+  default: //没有合适的case，就执行这个
+    alert("I don't know such values");
+}
+// 也可以这样，把两个case绑定在一起，
+
+//  case 3: // (*) 下面这两个 case 被分在一组
+//   case 5:
+//     alert('Wrong!');
+//     alert("Why don't you take a math class?");
+//     break;
+// case后面一定要跟break，不然会继续执行。
+//switch 结构的代码写成 if..else 结构，为了精确实现 switch 的功能，if 必须使用严格相等 '==='，除非都是字符串，就用==
+_____________________;
+//函数
+//使用 函数声明 创建函数，function 关键字首先出现，然后是 函数名
+function showMessage() {
+  alert("Hello everyone!");
+}
+showMessage();
+//在函数中声明的变量只在该函数内部可见
+//局部变量，外部不可以访问或者改
+//函数可以访问和修改外部变量
+//function这后面跟着的只是建立一个函数的流程，并不在第一次就调用
+//showMessage();    这里才第一次调用
+//在函数里面重新声明一个和外部一样的变量，并不是重新赋值，自己用自己的，不耽误，最好不要这样命名。
+//参数
+function showName(name1, name2) {
+  alert(name1 + name2);
+}
+showName("wocao", "lidaye");
+showName("wokao", "lidayede");
+//name1 和name2 就是参数，函数给参数赋予功能，外部调用函数的时候，外部函数里面给的参数，就会被name1 和name2 替换，然后按照功能运行
+//return
+//return会把return 后面的值返回给调用函数的地方
+//如果return后面是空的，那就直接退出函数。
+//不要在 return 与返回值之间添加新行  不要再return后面加；。不然就返回undefined，如果有很多，那就括号圈起来
+____________________;
+//函数表达式
+let sayHi = function () {
+  //函数表达式允许省略函数名，所以function后面什么也没有。
+  alert("Hello");
+};
+//无论函数是如何创建的，函数都是一个值，是一个赋予变量sayHi的值
+//当使用sayHi（）的时候，是在用函数，只用sayHi的时候，可能是给其他变量赋值
+//函数声明里面，function  name （） {}
+// 函数表达式里面  let name = function（）{}
+
+//回调函数
+function ask(question, yes, no) {
+  if (confirm(question)) yes(); //没有{}，因为if条件里面只有一个。
+  else no();
+}
+function showOk() {
+  alert("You agreed.");
+}
+function showCancel() {
+  alert("You canceled the execution.");
+}
+// 用法：函数 showOk 和 showCancel 被作为参数传入到 ask
+ask("Do you agree?", showOk, showCancel);
+// ask 的两个参数值 showOk 和 showCancel 可以被称为 回调函数 或简称 回调。
+
+// 箭头函数
+let sum = (a, b) => a + b; // a+b是函数的表达式，就是return的内容。
+/* 这个箭头函数是下面这个函数的更短的版本：
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+alert(sum(1, 2)); // 3
+//如果没有参数，括号则是空的（但括号必须保留）
+let age = prompt("What is your age?", 18);
+let welcome = age < 18 ? () => alert("Hello!") : () => alert("Greetings!");
+welcome();
+
+// 表达式在右侧
+let sum1 = (a, b) => a + b;
+// 或带 {...} 的多行语法，此处需要 return：
+let sum11 = (a, b) => {
+  // ...
+  return a + b;
+};
+// 没有参数
+let sayHi1 = () => alert("Hello");
+// 有一个参数
+let double = (n) => n * 2;

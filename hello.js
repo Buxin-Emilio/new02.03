@@ -178,4 +178,9 @@
 // } else {
 //   alert("sban");
 // }
-kaishi: for (let i = 0; i < 10; i++) {}
+kaishi: for (let i = 0; i < 10; i++) {
+  for (let j = 0; j < 10; j++) {
+    let input = prompt(`Value at coords (${i},${j})`, "");
+    if (!input) break kaishi;
+  }
+}
