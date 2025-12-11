@@ -1,3 +1,4 @@
+"use strict";
 // let user1 = { mz: "xiao", xb: "nan", nl: 10, age: true, name1: "a" };
 // alert(user1.mz);
 // alert(user1.age);
@@ -104,16 +105,65 @@
 // calculator.read();
 // alert(calculator.sum());
 // alert(calculator.mul());
-let ladder = {
-  step: 0,
-  up() {
-    this.step++;
-  },
-  down() {
-    this.step--;
-  },
-  showStep: function () {
-    // 显示当前的 step
-    alert(this.step);
-  },
-};
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//   },
+//   down() {
+//     this.step--;
+//   },
+//   showStep: function () {
+//     // 显示当前的 step
+//     alert(this.step);
+//   },
+// };
+// let a = 10;
+// a = 15;
+// let b = a++;
+// let c = "12";
+// alert(b);
+// alert(a + b);
+// alert(a + c);
+// let a1 = "okok";
+// alert(`my name is ${a1 + "haode"}`);
+// alert(typeof a1);
+// let a2 = prompt("input your number", 90);
+// let a3 = confirm("are you sure?");
+// let b = 12;
+// let c = "ok";
+// b = String(b);
+// c = Number(c);
+// alert(typeof b);
+// alert(typeof c);
+// alert(c);
+// let d = "10";
+// let d1 = "12";
+// alert(+d + +d1);
+// let e = 10;
+// let e1 = ++e;
+// alert(e1); //11
+// alert(e);//11
+// let e2 = 10;
+// let e3 = e2++;
+// alert(e3); //10
+// alert(e2);//11
+// let aa = 2;
+// let bb = 3;
+// alert(aa * bb);//6
+// alert(aa * bb++);//6
+// alert(aa * ++bb); //此时bb=4，再自增给aa的是5，所以得10
+// alert(aa * bb++);//10,自增后为6
+// alert(aa * ++bb);//14
+// alert(aa++);//2
+// alert(++aa); //3
+// let ab1 = 1;
+
+// let ab2 = "1";
+// alert(ab1 == ab2);
+// alert(ab1 === ab2);
+// let aa2 = "";
+// let bb2 = "ok";
+// let cc2 = 3;
+// alert(aa2 < bb2);
+// alert(aa2 < cc2);
