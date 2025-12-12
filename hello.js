@@ -184,3 +184,18 @@
 //     if (!input) break kaishi;
 //   }
 // }
+
+// function User(name) {
+//   this.name = name;
+//   this.isAdmin = false;
+// }
+// let user = new User("Jack");
+// alert(user.name); // Jack
+// alert(user.isAdmin); // false
+function User(name1) {
+  this.nima = "woc";
+  this.admin = name1;
+}
+let user = new User("john");
+alert(user.nima);
+alert(user.admin);
