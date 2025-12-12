@@ -42,4 +42,43 @@ let user2 = new (function () {
 
 _________________________;
 
-//构造器的 return
+//构造器的 return，构造器没有 return 语句，构造器的任务是把值写入this里面，但是，假如return返回的是一个对象，那就返回这个对象的所有参数给新对象，哪怕创建新对象的时候，有赋值给this，也不管用了，只要return里面的
+function User(name1) {
+  this.nima = "woc";
+  this.admin = name1;
+  return { admin: "xinmz", nima: "nbi" };
+}
+let user3 = new User("john");
+alert(user.nima); //nbi
+alert(user.admin); //xinmz
+//但是如果return后面跟的不是对象，或者空值，那就忽略return的，只管this的，上面的例子就会返回woc和john
+_____________________________;
+
+//构造器里面的方法
+
+function User(name) {
+  this.name = name;
+
+  this.sayHi = function () {
+    alert("My name is: " + this.name);
+  };
+}
+
+let john = new User("John");
+
+john.sayHi(); // My name is: John
+_____________________________;
+//作业
+//创建构造器，使两个对象全等
+//要让两个对象的参数都来自同一个对象才行，那就构造一个构造器，里面只return一个对象，
+let one = {};
+function A() {
+  return one;
+}
+function B() {
+  return one;
+}
+alert(new A() == new B());
+//总结一下，构造器就是，把正常的函数，里面的函数名前加this，让新创建的函数可以直接现买现卖构造器里面的功能。
+//现在构建计算器构造器
+//作业每天重新写

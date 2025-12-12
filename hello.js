@@ -192,10 +192,25 @@
 // let user = new User("Jack");
 // alert(user.name); // Jack
 // alert(user.isAdmin); // false
-function User(name1) {
-  this.nima = "woc";
-  this.admin = name1;
-}
-let user = new User("john");
-alert(user.nima);
-alert(user.admin);
+// function User(name1) {
+//   this.nima = "woc";
+//   this.admin = name1;
+//   return;
+// }
+// let user = new User("john");
+// alert(user.nima);
+// alert(user.admin);
+// function User(ab) {
+//   this.f = ab;
+// }
+// let a = new User("ab");
+// let b = a;
+// alert(a == b);
+// let one = {};
+// function A() {
+//   return one;
+// }
+// function B() {
+//   return one;
+// }
+// alert(new A() == new B());
