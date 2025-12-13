@@ -214,3 +214,21 @@
 //   return one;
 // }
 // alert(new A() == new B());
+// let okok = {};
+// function One() {
+//   return okok;
+// }
+// let A = new One();
+// let B = new One();
+// alert(A == B);
+// function Accumulator(value) {
+//   this.value = value;
+//   this.read = function () {
+//     this.value += +prompt("vaule", 0);
+//   };
+// }
+// let a = new Accumulator(5);
+// alert(a.value);
+// a.read();
+// a.read();
+// alert(a.value);

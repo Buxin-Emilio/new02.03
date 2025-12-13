@@ -71,7 +71,7 @@ _____________________________;
 //作业
 //创建构造器，使两个对象全等
 //要让两个对象的参数都来自同一个对象才行，那就构造一个构造器，里面只return一个对象，
-let one = {};
+let one = {}; //记得先声明空对象，再到函数里面引用
 function A() {
   return one;
 }
@@ -82,3 +82,34 @@ alert(new A() == new B());
 //总结一下，构造器就是，把正常的函数，里面的函数名前加this，让新创建的函数可以直接现买现卖构造器里面的功能。
 //现在构建计算器构造器
 //作业每天重新写
+function Calculator() {
+  this.read = function () {
+    this.a = +prompt("a", 0);
+    this.b = +prompt("b", 0);
+  };
+  this.sum = function () {
+    return this.a + this.b;
+  };
+  this.mul = function () {
+    return this.a * this.b;
+  };
+}
+let cal = new Calculator();
+cal.read();
+alert(cal.sum());
+alert(cal.mul());
+
+////////////////////
+//另外构造一个根据输入值，一直求和的工具
+
+function Accumulator(value) {
+  this.value = value;
+  this.read = function () {
+    this.value += +prompt("vaule", 0);
+  };
+}
+let a = new Accumulator(5);
+alert(a.value);
+a.read();
+a.read();
+alert(a.value);
